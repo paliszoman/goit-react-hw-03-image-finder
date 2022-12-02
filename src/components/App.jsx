@@ -5,7 +5,7 @@ import { ImageGalleryItem } from './ImageGalleryItem/ImageGalleryItem';
 import { Loader } from './Loader/Loader';
 import { Button } from './Button/Button';
 import { Modal } from './Modal/Modal';
-import { ThreeCircles } from 'react-loader-spinner';
+
 
 const API_KEY = '19743646-38e1a9cdaadffbdd4b9ec2ba3';
 
