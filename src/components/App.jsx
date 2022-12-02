@@ -1,15 +1,28 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+
 import { Searchbar } from './Searchbar/Searchbar';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { ImageGalleryItem } from './ImageGalleryItem/ImageGalleryItem';
 import { Loader } from './Loader/Loader';
 import { Button } from './Button/Button';
 import { Modal } from './Modal/Modal';
-import { ThreeCircles } from 'react-loader-spinner';
 
 const API_KEY = '19743646-38e1a9cdaadffbdd4b9ec2ba3';
 
 export class App extends Component {
+  static propTypes = {
+    quote: PropTypes.string,
+    pictures: PropTypes.array,
+    isLoading: PropTypes.bool,
+    page: PropTypes.number,
+    maxPage: PropTypes.number,
+    total: PropTypes.number,
+    modal: PropTypes.bool,
+    largeURL: PropTypes.string,
+    alt: PropTypes.string,
+  };
+
   state = {
     quote: '',
     pictures: [],

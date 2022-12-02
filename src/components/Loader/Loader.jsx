@@ -1,4 +1,5 @@
 import { Triangle } from 'react-loader-spinner';
+import PropTypes from 'prop-types';
 
 export const Loader = ({ loading }) => {
   return (
@@ -17,4 +18,8 @@ export const Loader = ({ loading }) => {
       visible={loading}
     />
   );
+};
+
+Loader.propTypes = {
+  loading: PropTypes.bool.isRequired,
 };

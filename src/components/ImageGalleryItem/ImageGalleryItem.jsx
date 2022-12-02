@@ -1,4 +1,5 @@
 import css from './ImageGalleryItem.module.css';
+import PropTypes from 'prop-types';
 
 export const ImageGalleryItem = ({ data, returnImage }) => {
   return (
@@ -18,8 +19,7 @@ export const ImageGalleryItem = ({ data, returnImage }) => {
   );
 };
 
-/* <img
-      src="https://poster.keepcalmandposters.com/default/5773497_keep_calm_there_is_nothing_here.png"
-      alt="nothing here"
-      className={css.nothing}
-    ></img>*/
+ImageGalleryItem.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  returnImage: PropTypes.func.isRequired,
+};

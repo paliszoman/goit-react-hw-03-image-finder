@@ -1,4 +1,6 @@
 import css from './Modal.module.css';
+import PropTypes from 'prop-types';
+
 export const Modal = ({ source, alt, closeModal }) => {
   return (
     <div className={css.overlay}>
@@ -10,4 +12,10 @@ export const Modal = ({ source, alt, closeModal }) => {
       </div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  source: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  closeModal: PropTypes.func.isRequired,
 };

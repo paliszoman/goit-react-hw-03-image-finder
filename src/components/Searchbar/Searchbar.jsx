@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import css from './Searchbar.module.css';
+import PropTypes from 'prop-types';
 
 export class Searchbar extends Component {
   takeQuery = e => {
@@ -31,3 +32,7 @@ export class Searchbar extends Component {
     );
   }
 }
+
+Searchbar.propTypes = {
+  request: PropTypes.string,
+};

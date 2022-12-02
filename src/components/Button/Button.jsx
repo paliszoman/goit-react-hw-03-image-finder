@@ -1,5 +1,6 @@
 import css from './Button.module.css';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class Button extends Component {
   clickHandler = e => {
@@ -14,3 +15,7 @@ export class Button extends Component {
     );
   }
 }
+
+Button.propTypes = {
+  clickHandler: PropTypes.func,
+};
